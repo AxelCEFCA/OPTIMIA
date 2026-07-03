@@ -1,0 +1,24 @@
+# router_rules.yaml  -  classification applied at Inbox intake (01_WORK_Inbox).
+# v02: an incoming message is classified and routed to an expediente TYPE under 03_WORK_Flow
+# (there is no separate triage folder). Low confidence => keep in Inbox flagged, NEVER delete.
+
+version: 2
+mint_correlation_id: true          # yymmdd-NN, threaded through the expediente and its facts
+default_route: 01_WORK_Inbox       # unclassifiable -> stays in Inbox, flagged for human triage
+
+# Map each request type (15_WHAT_Catalogs) to the expediente type it opens/updates in 03_WORK_Flow
+# and the facets it generates. Replace with this organisation's request types.
+rules:
+  - match: { request_type: "<PURCHASE>" }
+    open_in: 03_WORK_Flow/15_Purchases
+    facets: [46_WHO_Suppliers, 72_HOWMUCH_Procurement]
+  - match: { request_type: "<INCIDENT>" }
+    open_in: 03_WORK_Flow/36_Incidents
+    facets: [11_STATUS_Now, 13_WHAT_SystemTree]
+  - match: { request_type: "<MEETING>" }
+    open_in: 03_WORK_Flow/10_Governance
+    facets: [61_WHEN_Calendar]
+  - match: { request_type: "<DOCUMENT>" }
+    open_in: 03_WORK_Flow/NN_Theme
+    facets: [12_STATUS_Daily]
+# On close, every expediente emits a line into 12_STATUS_Daily (P3).

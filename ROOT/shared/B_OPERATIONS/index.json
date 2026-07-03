@@ -1,0 +1,133 @@
+{
+  "chamber": "B_OPERATIONS",
+  "generated_by": "07_CORE_Index / gen_index.py",
+  "note": "Generated artefact (P7) - do not hand-edit.",
+  "folders": [
+    {
+      "name": "00_WORK",
+      "kind": "base",
+      "family": "WORK",
+      "summary": "5W2H - WORK: Live, in-progress work (mutable, stateful). Two message trays and one expediente flow. When an expediente closes it EMITS a fact to STATUS (the day"
+    },
+    {
+      "name": "01_WORK_Inbox",
+      "kind": "derivative",
+      "family": "WORK",
+      "summary": "5W2H - WORK -> Every message that arrives, through any channel, lands here as one immutable file. This is the single front door of the memory."
+    },
+    {
+      "name": "02_WORK_Outbox",
+      "kind": "derivative",
+      "family": "WORK",
+      "summary": "5W2H - WORK -> Every message the organisation sends, through any channel, under human-in-the-loop approval. State = subfolder."
+    },
+    {
+      "name": "03_WORK_Flow",
+      "kind": "derivative",
+      "family": "WORK",
+      "summary": "5W2H - WORK -> Where the actual case-work lives. Expediente types are organised into a numbered, thematic taxonomy: the tens digit is a super-theme band, so rel"
+    },
+    {
+      "name": "04_WORK_Reserved",
+      "kind": "reserved",
+      "family": "WORK",
+      "summary": "Reserved slot in the WORK family (spare / future subcategory)."
+    },
+    {
+      "name": "05_WORK_Reserved",
+      "kind": "reserved",
+      "family": "WORK",
+      "summary": "Reserved slot in the WORK family (spare / future subcategory)."
+    },
+    {
+      "name": "06_WORK_Reserved",
+      "kind": "reserved",
+      "family": "WORK",
+      "summary": "Reserved slot in the WORK family (spare / future subcategory)."
+    },
+    {
+      "name": "07_WORK_Reserved",
+      "kind": "reserved",
+      "family": "WORK",
+      "summary": "Reserved slot in the WORK family (spare / future subcategory)."
+    },
+    {
+      "name": "08_WORK_Reserved",
+      "kind": "reserved",
+      "family": "WORK",
+      "summary": "Reserved slot in the WORK family (spare / future subcategory)."
+    },
+    {
+      "name": "09_WORK_Reserved",
+      "kind": "reserved",
+      "family": "WORK",
+      "summary": "Reserved slot in the WORK family (spare / future subcategory)."
+    },
+    {
+      "name": "10_STATUS",
+      "kind": "base",
+      "family": "STATUS",
+      "summary": "5W2H - STATUS: Now + history (is/was). The live state plus periodic rollups that consolidate the most relevant of each period (day / week / month / year)."
+    },
+    {
+      "name": "11_STATUS_Now",
+      "kind": "derivative",
+      "family": "STATUS",
+      "summary": "5W2H - STATUS -> The current live state of the organisation, updated through the day as events happen (an open incident, a system alarm, a decision taken, a mes"
+    },
+    {
+      "name": "12_STATUS_Daily",
+      "kind": "derivative",
+      "family": "STATUS",
+      "summary": "5W2H - STATUS -> At the end of each daily, a single HTML consolidates the most relevant of the period (facts, decisions, incidents, deliveries, KPIs, what chang"
+    },
+    {
+      "name": "13_STATUS_Weekly",
+      "kind": "derivative",
+      "family": "STATUS",
+      "summary": "5W2H - STATUS -> At the end of each weekly, a single HTML consolidates the most relevant of the period (facts, decisions, incidents, deliveries, KPIs, what chan"
+    },
+    {
+      "name": "14_STATUS_Monthly",
+      "kind": "derivative",
+      "family": "STATUS",
+      "summary": "5W2H - STATUS -> At the end of each monthly, a single HTML consolidates the most relevant of the period (facts, decisions, incidents, deliveries, KPIs, what cha"
+    },
+    {
+      "name": "15_STATUS_Yearly",
+      "kind": "derivative",
+      "family": "STATUS",
+      "summary": "5W2H - STATUS -> At the end of each yearly, a single HTML consolidates the most relevant of the period (facts, decisions, incidents, deliveries, KPIs, what chan"
+    },
+    {
+      "name": "16_STATUS_Reserved",
+      "kind": "reserved",
+      "family": "STATUS",
+      "summary": "Reserved slot in the STATUS family (spare / future subcategory)."
+    },
+    {
+      "name": "17_STATUS_Reserved",
+      "kind": "reserved",
+      "family": "STATUS",
+      "summary": "Reserved slot in the STATUS family (spare / future subcategory)."
+    },
+    {
+      "name": "18_STATUS_Reserved",
+      "kind": "reserved",
+      "family": "STATUS",
+      "summary": "Reserved slot in the STATUS family (spare / future subcategory)."
+    },
+    {
+      "name": "19_STATUS_Reserved",
+      "kind": "reserved",
+      "family": "STATUS",
+      "summary": "Reserved slot in the STATUS family (spare / future subcategory)."
+    },
+    {
+      "name": "_OUTPUT",
+      "kind": "kit",
+      "family": "OUTPUT",
+      "summary": "What goes here: the heavy generated files to deliver/send/archive: PDFs, embedded HTML"
+    }
+  ]
+}

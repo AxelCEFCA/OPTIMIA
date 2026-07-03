@@ -1,0 +1,104 @@
+# _PROFILE_TEMPLATE.yaml  -  the SWAPPABLE instance profile.
+#
+# This is the ONE file that changes when you reuse the template in another organisation.
+# Copy it to "<your_org_id>.yaml", replace every <PLACEHOLDER>, and leave the SPINE untouched.
+# Each block maps to a block in C_OPERATIONAL_KIT/_SKILLS/CONFIG_QUESTIONS.md (A..H).
+#
+# Rule: do not invent values. If you do not have an answer yet, keep the <PLACEHOLDER> and flag it.
+
+# ---- A · Entity identity -----------------------------------------------------
+profile:
+  id: "<org_id>"                 # short machine id, e.g. acme_corp
+  name: "<Official Name>"
+  short: "<SHORT>"               # acronym / short name
+  type: "<organisation type>"    # company | observatory | hospital | ngo | agency | lab | ...
+  program: "<program-or-layer>"  # the AI/program this memory serves (optional)
+  language: "<lang>"             # content language, e.g. en | es ; folders/concepts stay English PascalCase
+  description: "<one line: what the organisation does>"
+  date_today: "<YYYY-MM-DD>"
+
+# ---- SPINE (DO NOT EDIT) -----------------------------------------------------
+# The 5W2H spine is fixed and identical for every organisation. 10 families x 10 = 100 folders.
+spine:
+  families: [00_CORE, 10_WHAT, 20_WHY, 30_HOW, 40_WHO, 50_WHERE, 60_WHEN, 70_HOWMUCH, 00_WORK, 10_STATUS]
+  buckets_per_family: 10
+folders:
+  00_CORE:    [00_CORE, 01_CORE_Schema, 02_CORE_Templates, 03_CORE_Rules, 04_CORE_Governance, 05_CORE_Glossary, 06_CORE_Control, 07_CORE_Index, 08_CORE_Profile, 09_CORE_Flow]
+  10_WHAT:    [10_WHAT, 11_WHAT_Root, 12_WHAT_OrgStructure, 13_WHAT_SystemTree, 14_WHAT_DataModel, 15_WHAT_Catalogs, 16_WHAT_Services, 17_WHAT_Assets, 18_WHAT_Standards, 19_WHAT_Reserved]
+  20_WHY:     [20_WHY, 21_WHY_Purpose, 22_WHY_Mission, 23_WHY_Vision, 24_WHY_Values, 25_WHY_Principles, 26_WHY_Objectives, 27_WHY_ValueProposition, 28_WHY_Decisions, 29_WHY_Impact]
+  30_HOW:     [30_HOW, 31_HOW_Playbooks, 32_HOW_Procedures, 33_HOW_Processes, 34_HOW_Methods, 35_HOW_KnowledgeBase, 36_HOW_Integrations, 37_HOW_Policies, 38_HOW_Templates, 39_HOW_Automations]
+  40_WHO:     [40_WHO, 41_WHO_Roles, 42_WHO_Org, 43_WHO_People, 44_WHO_Teams, 45_WHO_Partners, 46_WHO_Suppliers, 47_WHO_Contacts, 48_WHO_Stakeholders, 49_WHO_Agents]
+  50_WHERE:   [50_WHERE, 51_WHERE_LocationTree, 52_WHERE_Sites, 53_WHERE_Compute, 54_WHERE_Networks, 55_WHERE_Field, 56_WHERE_Zones, 57_WHERE_External, 58_WHERE_Reserved, 59_WHERE_Reserved]
+  60_WHEN:    [60_WHEN, 61_WHEN_Calendar, 62_WHEN_Schedule, 63_WHEN_Cadences, 64_WHEN_OnCall, 65_WHEN_Milestones, 66_WHEN_Triggers, 67_WHEN_Roadmap, 68_WHEN_Reserved, 69_WHEN_Reserved]
+  70_HOWMUCH: [70_HOWMUCH, 71_HOWMUCH_Budget, 72_HOWMUCH_Procurement, 73_HOWMUCH_Costs, 74_HOWMUCH_Effort, 75_HOWMUCH_Metrics, 76_HOWMUCH_Resources, 77_HOWMUCH_Risks, 78_HOWMUCH_Reserved, 79_HOWMUCH_Reserved]
+  00_WORK:    [00_WORK, 01_WORK_Inbox, 02_WORK_Outbox, 03_WORK_Flow, 04_WORK_Reserved, 05_WORK_Reserved, 06_WORK_Reserved, 07_WORK_Reserved, 08_WORK_Reserved, 09_WORK_Reserved]
+  10_STATUS:  [10_STATUS, 11_STATUS_Now, 12_STATUS_Daily, 13_STATUS_Weekly, 14_STATUS_Monthly, 15_STATUS_Yearly, 16_STATUS_Reserved, 17_STATUS_Reserved, 18_STATUS_Reserved, 19_STATUS_Reserved]
+
+# ---- B · Branding (CONFIG block B) -------------------------------------------
+branding:
+  logos: []                      # [{id, file: _RESOURCES/logos/primary.svg, variants: [color, mono]}]
+  placement:                     # how logos sit on official documents
+    which: "<which logos>"
+    order: "<order>"
+    position: "<header|footer>"
+    size: "<size/margins>"
+    co_branding: "<rules>"
+  colors: []                     # ["#RRGGBB", ...]
+  typefaces: []
+
+# ---- C · Official documents (CONFIG block C) ---------------------------------
+documents:
+  types: []                      # [report, minutes, memo, record_card, email, ...]
+  tone: "<register / form of address>"
+
+# ---- D · Output (CONFIG block D) ---------------------------------------------
+output:
+  formats: []                    # [pdf, embedded_html]
+  naming: "<naming convention>"
+  organize_by: "<date|type>"
+
+# ---- E · Channels & integrations (CONFIG block E) ----------------------------
+channels: []                     # [email, chat, task_manager, ...]
+integrations: {}                 # name: { role: <what>, authoritative_for: <datum> }
+
+# ---- F · Roles, governance, privacy, boundaries (CONFIG block F) -------------
+roles: [role:leadership, role:operations, role:coordination, role:admin, role:agent01]  # by role, never person
+governance:
+  promotion_approver: "<role>"   # who accepts promotions OPERATIONS -> REFERENCE
+privacy:
+  pii_home: "43_WHO_People/_restricted"
+  anonymize_before_cloud: true   # tool/service that redacts PII -> roles
+boundaries:
+  advise_only: true
+  never_write: []                # control systems the AI must never write to (advise-only)
+
+# ---- G · Domain codes & enums (CONFIG block G) -------------------------------
+domain_codes:                    # 4-letter namespace projected by CODE_CATALOG (05_CORE_Glossary)
+  what: {}                       # CODE: "system description"
+  where: {}                      # CODE: "location description"
+  building_prefix: "<prefix>"
+enums:                           # closed catalogues -> 15_WHAT_Catalogs
+  request_types: []
+  channels: [EMAIL, WHATSAPP, TELEGRAM, PHONE, VIDEOCONF, INPERSON]   # Inbox/Outbox channels (rename/extend)
+  trackers: []
+  # 03_WORK_Flow themes, numbered by band (10-19 admin/governance, 20-29 science, 30-39 engineering, 40-49 outreach). Adapt per org.
+  expediente_types: [00_General, 10_Governance, 11_RulesAndRegulations, 12_ArtificialIntelligenceCommittee, 13_ComplianceAndCybersecurity, 14_ContractsAndTenders, 15_Purchases, 16_GrantsAndFunding, 17_HumanResources, 18_SafetyRiskPrevention, 20_ScientificArea, 21_ScientificOperation, 22_ObservingPrograms, 23_ScientificDataProcess, 24_DataReleasesAndPublications, 30_Engineering, 31_Projects, 32_Developments, 33_EngineeringChanges, 34_CommissioningAndAcceptance, 35_Maintenance, 36_Incidents, 37_FacilitiesAndSite, 38_ITandOT, 40_OutreachArea, 41_EventsAndOutreach, 42_WorkingGroups]
+  expediente_states: [OPEN, IN_PROGRESS, WAITING, RESOLVED, CLOSED, REJECTED]   # state on the expediente cover
+  status_periods: [Now, Daily, Weekly, Monthly, Yearly]
+  oncall: []
+
+# ---- H · Cadence (CONFIG block H) --------------------------------------------
+cadence: {}                      # e.g. { weekly_planning: "<day>", day_night: <bool> }
+
+# ---- Agents & consolidation (v04) --------------------------------------------
+# Each agent is a particularised copy of agents/<prototype>. Its periodic STATUS rollups are
+# consolidated (summary + pointer, P1) into the SHARED STATUS on the cadence below. See
+# A_REFERENCE/00_CORE/AGENT_CONSOLIDATION.md.
+agents:
+  prototype: agents/agent01
+  consolidation:
+    cadence: [Monthly, Yearly]     # which agent STATUS rollups feed the shared STATUS (configurable)
+    into: 10_STATUS                # shared STATUS family (12_STATUS_Daily .. 15_STATUS_Yearly)
+    mode: summary_with_pointer     # merge a summary + [Source: agents/<id>/...] ; never copy detail (P1)
+    approver: role:leadership      # human-in-the-loop merge into the shared STATUS
+    also_promote_approved_reference: true

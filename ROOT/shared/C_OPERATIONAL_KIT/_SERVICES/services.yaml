@@ -1,0 +1,35 @@
+# services.yaml  -  the machine-readable service registry (skills & MCP).
+#
+# The index an agent loads to discover what it can call. One entry per service; the full
+# detail lives in the matching "<id>.md" card. Ships EMPTY (the two example_* entries below
+# are illustrative placeholders - delete them and register the real services on configuration,
+# CONFIG_QUESTIONS.md block E). Secrets are NEVER stored here; declare only which auth is needed.
+
+version: 1
+services: []        # fill with entries shaped like the commented examples below
+
+# --- shape reference (illustrative; not active) ------------------------------
+# services:
+#   - id: official-documents          # a SKILL service
+#     kind: skill
+#     status: available
+#     owner: role:operations
+#     summary: "Produce an official document and deliver it as PDF / embedded HTML."
+#     skill_ref: ../_SKILLS/skill_official_documents.md
+#     auth: none
+#     requires_confirmation: false
+#     card: example_skill_service.md
+#
+#   - id: task-manager                # an MCP service
+#     kind: mcp
+#     status: planned
+#     owner: role:operations
+#     summary: "Read/update work items in the organisation's task manager over MCP."
+#     transport: stdio
+#     endpoint: "<command to launch the MCP server>"
+#     tools: [list_tasks, get_task, update_task]
+#     auth: api_key                   # the KEY itself lives in the secret store, not here
+#     scopes: [tasks:read, tasks:write]
+#     requires_confirmation: true     # writes need human approval (human-in-the-loop)
+#     card: example_mcp_service.md
+#     implements: 36_HOW_Integrations  # the business integration this MCP fulfils

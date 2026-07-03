@@ -1,0 +1,29 @@
+# ownership.yaml  -  who may rewrite each canonical home (single-writer law, P1).
+# Generic template: replace <role:*> with this organisation's roles (see 08_CORE_Profile).
+# v02: B_OPERATIONS reshaped (Inbox/Outbox/Flow + periodic STATUS).
+
+version: 2
+default_owner: role:leadership
+
+owners:
+  # REFERENCE (the curated model) - owned by leadership/governance roles.
+  "shared/A_REFERENCE/00_CORE":         role:leadership
+  "shared/A_REFERENCE/03_CORE_Rules":   role:leadership
+  "shared/A_REFERENCE/08_CORE_Profile": role:leadership
+  "shared/A_REFERENCE/10_WHAT":         role:operations
+  "shared/A_REFERENCE/40_WHO":          role:operations
+  "shared/A_REFERENCE/43_WHO_People":   role:admin          # PII - restricted owner
+  "shared/A_REFERENCE/70_HOWMUCH":      role:admin
+  # OPERATIONS (the runtime).
+  "shared/B_OPERATIONS/00_WORK":        role:operations
+  "shared/B_OPERATIONS/01_WORK_Inbox":  role:operations
+  "shared/B_OPERATIONS/02_WORK_Outbox": role:operations     # send needs human approval
+  "shared/B_OPERATIONS/03_WORK_Flow":   role:operations     # expedientes (per-type owners on config)
+  "shared/B_OPERATIONS/10_STATUS":      role:operations     # periodic rollups
+  # Each agent owns its whole private subtree.
+  "agents/agent01":                     role:agent01
+
+self_entries:
+  - role: role:agent01
+    home: agents/agent01
+    may_propose_to: shared/A_REFERENCE/**   # handshake from an expediente in 03_WORK_Flow

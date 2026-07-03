@@ -1,0 +1,487 @@
+{
+  "chamber": "A_REFERENCE",
+  "generated_by": "07_CORE_Index / gen_index.py",
+  "note": "Generated artefact (P7) - do not hand-edit.",
+  "folders": [
+    {
+      "name": "00_CORE",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"What is this memory, what laws govern it, and how do I read the"
+    },
+    {
+      "name": "01_CORE_Schema",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"How is each page and each bucket structured?\"* It is the formal"
+    },
+    {
+      "name": "02_CORE_Templates",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"What does a well-formed memory page look like for each node type?\"*"
+    },
+    {
+      "name": "03_CORE_Rules",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"Given a piece of information, where does it go and how do I write"
+    },
+    {
+      "name": "04_CORE_Governance",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"Which rules cannot be broken, who may write what, and how are"
+    },
+    {
+      "name": "05_CORE_Glossary",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"What do the words this memory uses mean?\"* This is the glossary of"
+    },
+    {
+      "name": "06_CORE_Control",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"Who owns what, how is intake routed, what enters the RAG corpus,"
+    },
+    {
+      "name": "07_CORE_Index",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"How are the human and machine indexes produced, and what must they"
+    },
+    {
+      "name": "08_CORE_Profile",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"Which organisation is this, what does it materialise, and with"
+    },
+    {
+      "name": "09_CORE_Flow",
+      "kind": "core",
+      "family": "CORE",
+      "summary": "What question does it answer? *\"What happens to a datum from the moment it arrives until it is"
+    },
+    {
+      "name": "10_WHAT",
+      "kind": "base",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT: What exists? The identity, structure and catalogues of the things this memory knows."
+    },
+    {
+      "name": "11_WHAT_Root",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> What the entity itself is, at the top level (the organisation/program this memory serves)."
+    },
+    {
+      "name": "12_WHAT_OrgStructure",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> The org chart as a model/structure (boxes and reporting lines)."
+    },
+    {
+      "name": "13_WHAT_SystemTree",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> The tree of systems/products the entity owns (functional identity)."
+    },
+    {
+      "name": "14_WHAT_DataModel",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> The schema of business entities (the shape of a 'request', a ticket, an incident)."
+    },
+    {
+      "name": "15_WHAT_Catalogs",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> Closed taxonomies / controlled vocabularies of the business."
+    },
+    {
+      "name": "16_WHAT_Services",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> The catalogue of services/products the entity delivers."
+    },
+    {
+      "name": "17_WHAT_Assets",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> Classes of assets / instruments / equipment."
+    },
+    {
+      "name": "18_WHAT_Standards",
+      "kind": "derivative",
+      "family": "WHAT",
+      "summary": "5W2H - WHAT -> External/internal specs that DEFINE (norms, formats)."
+    },
+    {
+      "name": "19_WHAT_Reserved",
+      "kind": "reserved",
+      "family": "WHAT",
+      "summary": "Reserved slot in the WHAT family (spare / future subcategory)."
+    },
+    {
+      "name": "20_WHY",
+      "kind": "base",
+      "family": "WHY",
+      "summary": "5W2H - WHY: Why does the entity exist and act this way? Purpose, mission, values, decisions (the deep 'why')."
+    },
+    {
+      "name": "21_WHY_Purpose",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> The ultimate reason the entity exists."
+    },
+    {
+      "name": "22_WHY_Mission",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> What we do, permanently."
+    },
+    {
+      "name": "23_WHY_Vision",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> The aspirational future, undated."
+    },
+    {
+      "name": "24_WHY_Values",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> The values and beliefs the entity holds."
+    },
+    {
+      "name": "25_WHY_Principles",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> Guiding operating principles."
+    },
+    {
+      "name": "26_WHY_Objectives",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> Qualitative strategic objectives / OKRs."
+    },
+    {
+      "name": "27_WHY_ValueProposition",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> The value proposition + why stakeholders matter."
+    },
+    {
+      "name": "28_WHY_Decisions",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> Decision rationale / ADRs (the 'why' of each decision)."
+    },
+    {
+      "name": "29_WHY_Impact",
+      "kind": "derivative",
+      "family": "WHY",
+      "summary": "5W2H - WHY -> The positive impact pursued."
+    },
+    {
+      "name": "30_HOW",
+      "kind": "base",
+      "family": "HOW",
+      "summary": "5W2H - HOW: How does it work? Playbooks, procedures, processes, methods, knowledge, integrations, policies (the definition, not the run)."
+    },
+    {
+      "name": "31_HOW_Playbooks",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> End-to-end scenarios (a full play)."
+    },
+    {
+      "name": "32_HOW_Procedures",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> Step-by-step SOPs."
+    },
+    {
+      "name": "33_HOW_Processes",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> State machines / process definitions."
+    },
+    {
+      "name": "34_HOW_Methods",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> Methodologies."
+    },
+    {
+      "name": "35_HOW_KnowledgeBase",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> Reference knowledge that informs operation."
+    },
+    {
+      "name": "36_HOW_Integrations",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> How to connect to external systems."
+    },
+    {
+      "name": "37_HOW_Policies",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> Operating policies."
+    },
+    {
+      "name": "38_HOW_Templates",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> Output / business templates."
+    },
+    {
+      "name": "39_HOW_Automations",
+      "kind": "derivative",
+      "family": "HOW",
+      "summary": "5W2H - HOW -> What the agents/automations do."
+    },
+    {
+      "name": "40_WHO",
+      "kind": "base",
+      "family": "WHO",
+      "summary": "5W2H - WHO: Who is involved? Every actor: roles, units, people, teams, partners, suppliers, contacts, stakeholders, agents."
+    },
+    {
+      "name": "41_WHO_Roles",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Roles & responsibilities (RACI); roles-not-persons."
+    },
+    {
+      "name": "42_WHO_Org",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Units / departments."
+    },
+    {
+      "name": "43_WHO_People",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Real people / PII. RESTRICTED, no-RAG."
+    },
+    {
+      "name": "44_WHO_Teams",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Teams / working groups (cross-cutting)."
+    },
+    {
+      "name": "45_WHO_Partners",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Partners / collaborations."
+    },
+    {
+      "name": "46_WHO_Suppliers",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Commercial suppliers / vendors."
+    },
+    {
+      "name": "47_WHO_Contacts",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Contact / distribution lists."
+    },
+    {
+      "name": "48_WHO_Stakeholders",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> Stakeholder register (the entity)."
+    },
+    {
+      "name": "49_WHO_Agents",
+      "kind": "derivative",
+      "family": "WHO",
+      "summary": "5W2H - WHO -> AI agents as entities."
+    },
+    {
+      "name": "50_WHERE",
+      "kind": "base",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE: Where? Physical locations, sites, compute environments, networks, work context, zones."
+    },
+    {
+      "name": "51_WHERE_LocationTree",
+      "kind": "derivative",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE -> Physical locations (buildings/sites tree)."
+    },
+    {
+      "name": "52_WHERE_Sites",
+      "kind": "derivative",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE -> Sites / campuses (macro)."
+    },
+    {
+      "name": "53_WHERE_Compute",
+      "kind": "derivative",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE -> Compute environments (where data runs)."
+    },
+    {
+      "name": "54_WHERE_Networks",
+      "kind": "derivative",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE -> Network topology / segments."
+    },
+    {
+      "name": "55_WHERE_Field",
+      "kind": "derivative",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE -> Work context: office vs field/on-site."
+    },
+    {
+      "name": "56_WHERE_Zones",
+      "kind": "derivative",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE -> Security / access zones, TLP."
+    },
+    {
+      "name": "57_WHERE_External",
+      "kind": "derivative",
+      "family": "WHERE",
+      "summary": "5W2H - WHERE -> Third-party premises."
+    },
+    {
+      "name": "58_WHERE_Reserved",
+      "kind": "reserved",
+      "family": "WHERE",
+      "summary": "Reserved slot in the WHERE family (spare / future subcategory)."
+    },
+    {
+      "name": "59_WHERE_Reserved",
+      "kind": "reserved",
+      "family": "WHERE",
+      "summary": "Reserved slot in the WHERE family (spare / future subcategory)."
+    },
+    {
+      "name": "60_WHEN",
+      "kind": "base",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN: When? Planned calendar, schedules, cadences, on-call, milestones, triggers, roadmap. The 'should', not the 'was'."
+    },
+    {
+      "name": "61_WHEN_Calendar",
+      "kind": "derivative",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN -> Planned by-the-hour events (calendar)."
+    },
+    {
+      "name": "62_WHEN_Schedule",
+      "kind": "derivative",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN -> Planned person x day grid / shifts (rota)."
+    },
+    {
+      "name": "63_WHEN_Cadences",
+      "kind": "derivative",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN -> Recurring rhythms."
+    },
+    {
+      "name": "64_WHEN_OnCall",
+      "kind": "derivative",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN -> Planned on-call rotations."
+    },
+    {
+      "name": "65_WHEN_Milestones",
+      "kind": "derivative",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN -> Future milestones / deadlines."
+    },
+    {
+      "name": "66_WHEN_Triggers",
+      "kind": "derivative",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN -> Future triggers / conditions / reminders."
+    },
+    {
+      "name": "67_WHEN_Roadmap",
+      "kind": "derivative",
+      "family": "WHEN",
+      "summary": "5W2H - WHEN -> Phased roadmap (MVP / Phase 2 / Future)."
+    },
+    {
+      "name": "68_WHEN_Reserved",
+      "kind": "reserved",
+      "family": "WHEN",
+      "summary": "Reserved slot in the WHEN family (spare / future subcategory)."
+    },
+    {
+      "name": "69_WHEN_Reserved",
+      "kind": "reserved",
+      "family": "WHEN",
+      "summary": "Reserved slot in the WHEN family (spare / future subcategory)."
+    },
+    {
+      "name": "70_HOWMUCH",
+      "kind": "base",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH: How much? The quantitative face of any topic: budget, procurement, costs, effort, metrics, resources, risks."
+    },
+    {
+      "name": "71_HOWMUCH_Budget",
+      "kind": "derivative",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH -> Budgets / planned amounts."
+    },
+    {
+      "name": "72_HOWMUCH_Procurement",
+      "kind": "derivative",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH -> The master procurement file (amount/status of a purchase)."
+    },
+    {
+      "name": "73_HOWMUCH_Costs",
+      "kind": "derivative",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH -> Actual costs / estimates."
+    },
+    {
+      "name": "74_HOWMUCH_Effort",
+      "kind": "derivative",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH -> Effort / capacity, planned-vs-reported."
+    },
+    {
+      "name": "75_HOWMUCH_Metrics",
+      "kind": "derivative",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH -> KPIs / sizing figures."
+    },
+    {
+      "name": "76_HOWMUCH_Resources",
+      "kind": "derivative",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH -> Quantities (licenses, quotas, headcount)."
+    },
+    {
+      "name": "77_HOWMUCH_Risks",
+      "kind": "derivative",
+      "family": "HOWMUCH",
+      "summary": "5W2H - HOWMUCH -> Risk = severity x likelihood."
+    },
+    {
+      "name": "78_HOWMUCH_Reserved",
+      "kind": "reserved",
+      "family": "HOWMUCH",
+      "summary": "Reserved slot in the HOWMUCH family (spare / future subcategory)."
+    },
+    {
+      "name": "79_HOWMUCH_Reserved",
+      "kind": "reserved",
+      "family": "HOWMUCH",
+      "summary": "Reserved slot in the HOWMUCH family (spare / future subcategory)."
+    }
+  ]
+}

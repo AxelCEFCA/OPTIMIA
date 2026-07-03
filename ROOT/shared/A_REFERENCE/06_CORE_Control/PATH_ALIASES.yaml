@@ -1,0 +1,6 @@
+# PATH_ALIASES.yaml  -  migration = indirection, not rewrite (P6).
+# When a home moves, add an alias here; sealed evidence ([Source: ...]) is NEVER rewritten.
+# IDs are stable and NOT derived from the path.
+
+version: 1
+aliases: {}        # "old/path": "new/path"

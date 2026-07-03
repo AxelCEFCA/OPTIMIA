@@ -1,0 +1,17 @@
+# rag_manifest.yaml  -  what enters the retrieval corpus (RAG-EXIT law).
+# Corpus = status:approved AND NOT superseded. The exclusions below are mandatory.
+# v02: STATUS reshaped; PII stays in 43_WHO_People/_restricted; the live page and open expedientes
+# are unstable and excluded.
+
+version: 2
+include:
+  status: [approved]
+  exclude_superseded: true
+always_exclude:
+  - shared/A_REFERENCE/43_WHO_People           # PII
+  - shared/B_OPERATIONS/11_STATUS_Now          # mutable, unstable
+  - "**/_expediente.html?estado=OPEN"          # open expedientes are unstable (conceptual filter)
+exclude_by_tag:
+  - sensitivity: [pii, restricted]             # restricted items are excluded wherever they live
+  - estado: [ARCHIVED, CLOSED_SUPERSEDED]      # archive is a state flag (R4)
+anonymize_before_cloud: true                   # roles, not persons; see 37_HOW_Policies

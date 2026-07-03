@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5W2H Memory — landing</title>
+<style>
+  :root{--ink:#1d2733;--muted:#5d6b7a;--line:#e3e8ee;--a:#2a6df0;--b:#0f9d6b;--c:#9b59b6;--bg:#f7f9fc;}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);}
+  .wrap{max-width:980px;margin:0 auto;padding:32px 20px 64px;}
+  h1{font-size:28px;margin:0 0 4px;}
+  .sub{color:var(--muted);margin:0 0 24px;}
+  .banner{background:#fff8e6;border:1px solid #f0e0a8;border-radius:10px;padding:14px 16px;margin:0 0 28px;font-size:14.5px;}
+  .banner b{color:#8a6d1a;}
+  .doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:0 0 32px;}
+  .door{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;transition:.15s;}
+  .door:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,40,80,.08);}
+  .door .tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;}
+  .door h2{margin:8px 0 6px;font-size:19px;}
+  .door p{margin:0;color:var(--muted);font-size:14px;}
+  .da .tag{color:var(--a)} .db .tag{color:var(--b)} .dc .tag{color:var(--c)}
+  .da{border-top:3px solid var(--a)} .db{border-top:3px solid var(--b)} .dc{border-top:3px solid var(--c)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:0 0 18px;}
+  .card h3{margin:0 0 10px;font-size:16px;}
+  code{background:#eef2f7;padding:1px 6px;border-radius:5px;font-size:13px;}
+  ol{margin:8px 0 0;padding-left:22px;} ol li{margin:4px 0;}
+  a{color:var(--a);}
+  .foot{color:var(--muted);font-size:13px;margin-top:24px;border-top:1px solid var(--line);padding-top:14px;}
+  .spine{font-size:13.5px;color:var(--muted);}
+  .spine b{color:var(--ink);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>5W2H Memory — landing page</h1>
+  <p class="sub">A generic, reusable memory for humans and agents. Three chambers, one spine.</p>
+
+  <div class="banner">
+    <b>This is a blank template (V04).</b> Nothing here names a real organisation yet. The B_OPERATIONS working chamber is: <code>01_WORK_Inbox</code> (all incoming messages) · <code>02_WORK_Outbox</code> · <code>03_WORK_Flow</code> (expedientes by type) · STATUS = Now + Daily/Weekly/Monthly/Yearly rollups. <code>03_WORK_Flow</code> is a numbered thematic taxonomy (adapt per organisation). Each agent has a private mirror under <code>agents/</code> that consolidates its periodic STATUS into the shared STATUS. Before generating
+    anything, read <a href="START_HERE.md">START_HERE.md</a> and configure the instance via
+    <a href="C_OPERATIONAL_KIT/_SKILLS/CONFIG_QUESTIONS.md">CONFIG_QUESTIONS.md</a> → <a href="A_REFERENCE/08_CORE_Profile/">08_CORE_Profile</a>.
+  </div>
+
+  <div class="doors">
+    <a class="door da" href="A_REFERENCE/index.html">
+      <div class="tag">A · Reference</div>
+      <h2>Consult the model</h2>
+      <p>The permanent model (00–79): what / why / how / who / where / when / how-much. Curated, slow.</p>
+    </a>
+    <a class="door db" href="B_OPERATIONS/index.html">
+      <div class="tag">B · Operations</div>
+      <h2>Do the work</h2>
+      <p>The now (00–19): work in progress + live state, chronicle, evidence. Plus <code>_OUTPUT/</code> deliverables.</p>
+    </a>
+    <a class="door dc" href="C_OPERATIONAL_KIT/index.html">
+      <div class="tag">C · Operational kit</div>
+      <h2>Operate &amp; produce</h2>
+      <p>Skills, brand resources, tools and the service registry (skills &amp; MCP). How you run and produce — permanent infrastructure.</p>
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>First time here? Read in this order</h3>
+    <ol>
+      <li><a href="START_HERE.md">START_HERE.md</a> — the map and your first task.</li>
+      <li><a href="C_OPERATIONAL_KIT/_SKILLS/README.md">_SKILLS/README.md</a> — the default skills.</li>
+      <li><a href="C_OPERATIONAL_KIT/_SKILLS/CONFIG_QUESTIONS.md">CONFIG_QUESTIONS.md</a> — ask the organisation.</li>
+      <li><a href="A_REFERENCE/08_CORE_Profile/_PROFILE_TEMPLATE.yaml">08_CORE_Profile</a> — write the answers.</li>
+      <li><a href="C_OPERATIONAL_KIT/_SKILLS/skill_generate_your_skills.md">skill_generate_your_skills.md</a> — specialise the skills.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>The spine (same in every chamber)</h3>
+    <p class="spine">
+      <b>00_CORE</b> meta · <b>10_WHAT</b> definition · <b>20_WHY</b> purpose · <b>30_HOW</b> operation ·
+      <b>40_WHO</b> entities · <b>50_WHERE</b> location · <b>60_WHEN</b> planning · <b>70_HOWMUCH</b> magnitude ·
+      <b>00_WORK</b> work · <b>10_STATUS</b> now+history.
+    </p>
+    <p class="spine">Placement law: <b>one canonical home + read-only facets</b>; <b>Entity ≠ Work ≠ Event</b>.
+      Full rules in <a href="A_REFERENCE/03_CORE_Rules/ClassificationCriteria.md">03_CORE_Rules</a>.</p>
+  </div>
+
+  <div class="card">
+    <h3>How to navigate &amp; manage this memory</h3>
+    <ol>
+      <li>Enter a chamber (the three doors above) or jump straight to
+        <a href="A_REFERENCE/index.html">A_REFERENCE</a> ·
+        <a href="B_OPERATIONS/index.html">B_OPERATIONS</a> ·
+        <a href="C_OPERATIONAL_KIT/index.html">C_OPERATIONAL_KIT</a>. Each chamber index has a chamber
+        switcher and lists every folder with a one-line summary.</li>
+      <li>To find or place anything, follow the guide
+        <a href="C_OPERATIONAL_KIT/_SKILLS/skill_use_structure.md">skill_use_structure.md</a> and the
+        routing rules in <a href="A_REFERENCE/03_CORE_Rules/ClassificationCriteria.md">03_CORE_Rules</a>.</li>
+      <li>Machine site-maps (for agents): <code>A_REFERENCE/index.json</code>,
+        <code>B_OPERATIONS/index.json</code>; the full folder tree is
+        <a href="../_TREE.txt"><code>_TREE.txt</code></a>.</li>
+      <li>Each agent has a private, scaled copy of this structure under
+        <a href="../agents/agent01/README.md"><code>agents/&lt;id&gt;/</code></a> that consolidates its
+        periodic STATUS back into the shared memory.</li>
+    </ol>
+  </div>
+
+  <div class="foot">
+    Generic 5W2H Memory Template · V04 · machine index per chamber in <code>index.json</code> ·
+    indexes are generated (P7), not hand-edited.
+  </div>
+</div>
+</body>
+</html>

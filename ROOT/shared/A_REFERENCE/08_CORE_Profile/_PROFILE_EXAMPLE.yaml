@@ -1,0 +1,95 @@
+# _PROFILE_EXAMPLE.yaml  -  ILLUSTRATIVE example of a FILLED profile.
+#
+# This is NOT a real organisation. It exists only to show the SHAPE of every block once
+# the placeholders are replaced (the cold-read test asked for one). "Riverbend Institute"
+# is a fictional placeholder org. When you configure a real instance, copy
+# _PROFILE_TEMPLATE.yaml (not this file) to "<your_org_id>.yaml" and fill it from the
+# CONFIG_QUESTIONS interview. Delete or ignore this example.
+
+# ---- A · Entity identity -----------------------------------------------------
+profile:
+  id: riverbend_institute
+  name: "Riverbend Institute"
+  short: "RBI"
+  type: research_institute
+  program: "internal AI assistant layer"
+  language: en
+  description: "A mid-size research institute running shared lab facilities and grants."
+  date_today: "2026-01-15"
+
+# ---- SPINE (unchanged from the template - shown abbreviated here) -------------
+spine:
+  families: [00_CORE, 10_WHAT, 20_WHY, 30_HOW, 40_WHO, 50_WHERE, 60_WHEN, 70_HOWMUCH, 00_WORK, 10_STATUS]
+  buckets_per_family: 10
+# (the full `folders:` block is identical to _PROFILE_TEMPLATE.yaml and is omitted here for brevity)
+
+# ---- B · Branding ------------------------------------------------------------
+branding:
+  logos:
+    - { id: primary,  file: _RESOURCES/logos/primary.svg,  variants: [color, mono] }
+    - { id: funder_a, file: _RESOURCES/logos/funder_a.svg, variants: [color] }
+  placement:
+    which: "primary + funder_a (co-branded)"
+    order: "primary left, funder right"
+    position: header
+    size: "primary 42px tall; 12mm clear space"
+    co_branding: "funders only on grant deliverables"
+  colors: ["#0E5A8A", "#7FB2D6"]
+  typefaces: ["Source Sans 3", "Source Serif 4"]
+
+# ---- C · Official documents --------------------------------------------------
+documents:
+  types: [report, minutes, memo, grant_record, email]
+  tone: "formal, plural address"
+
+# ---- D · Output --------------------------------------------------------------
+output:
+  formats: [pdf, embedded_html]
+  naming: "yymmdd_<Type>_<slug>"
+  organize_by: date
+
+# ---- E · Channels & integrations ---------------------------------------------
+channels: [email, chat, task_manager]
+integrations:
+  task_manager: { role: work_tracker, authoritative_for: ticket_state }
+  calendar:     { role: scheduling,   authoritative_for: planned_events }
+
+# ---- F · Roles, governance, privacy, boundaries ------------------------------
+roles: [role:leadership, role:operations, role:lab_manager, role:admin, role:agent01]
+governance:
+  promotion_approver: role:leadership
+privacy:
+  pii_home: "43_WHO_People/_restricted"
+  anonymize_before_cloud: true
+boundaries:
+  advise_only: true
+  never_write: [lab_control_system, building_management_system]
+
+# ---- G · Domain codes & enums ------------------------------------------------
+domain_codes:
+  what:  { LIMS: "Lab information management system", GRNT: "Grants system" }
+  where: { BMAN: "Main building", BLAB: "Lab annex" }
+  building_prefix: "B"
+enums:
+  request_types: [purchase, incident, document, grant_action]
+  trackers: [parent, office, field, admin, bug]
+  channels: [EMAIL, PHONE, INPERSON]
+  expediente_types: [00_General, 10_Governance, 15_Purchases, 35_Maintenance, 36_Incidents, 31_Projects, 17_HumanResources]
+  expediente_states: [OPEN, IN_PROGRESS, WAITING, RESOLVED, CLOSED, REJECTED]
+  status_periods: [Now, Daily, Weekly, Monthly, Yearly]
+  oncall: [primary, backup]
+
+# ---- H · Cadence -------------------------------------------------------------
+cadence:
+  weekly_planning: monday
+  day_night: false
+
+# ---- Agents & consolidation (v04) --------------------------------------------
+agents:
+  prototype: agents/agent01
+  consolidation:
+    cadence: [Monthly, Yearly]
+    into: 10_STATUS
+    mode: summary_with_pointer
+    approver: role:leadership
+    also_promote_approved_reference: true
